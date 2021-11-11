@@ -18,3 +18,10 @@ void test1() {
     println("Failure!");
   }
 }
+
+void test2() {
+
+  
+
+
+}
