@@ -20,8 +20,6 @@ void test1() {
 }
 
 void test2() {
-  String[] resultat = search(liste, "*");
-
   if ("*") {
     println(liste.length);
   } else {
