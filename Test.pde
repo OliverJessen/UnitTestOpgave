@@ -1,7 +1,5 @@
 String[] liste = {"Paris", "Budapest", "Skopje", "Rotterdam", "Valencia", "Vancouver", "Amsterdam", "Vienna", "Sydney", "New York City", "London", "Bangkok", "Hong Kong", "Dubai", "Rome", "Istanbul"};
 
-String testPrefix = "";
-
 void runUnitTests() {
   //her skriver du dine unit test's
   //nedenfor er bare et eksempel på tre unit-tests
@@ -9,6 +7,19 @@ void runUnitTests() {
   test1();
   test2();
   test3();
+}
+
+ArrayList<String> indhold = new ArrayList<String>();
+
+String[] search(String[] liste, String tekst) {
+  for (String e : liste) {
+    if (e.contains(tekst)) {
+      indhold.add(e);
+    }
+  }
+  String[] result = indhold.toArray( new String[0]);
+
+  return result;
 }
 
 void test1() { //Ingen bynavne bliver printet ud, fordi det ikke er mere end 2 karakterer.
@@ -22,8 +33,7 @@ void test1() { //Ingen bynavne bliver printet ud, fordi det ikke er mere end 2 k
 }
 
 void test2() { //Alle bynavne bliver printet ud.
-  boolean allCities = true;
-  if (allCities) {
+  if (tekst == "*") {
     println("Succes! Alle bynavne bliver printet ud.");
     for (int i = 0; i < liste.length; i++)
       println(liste[i]);
@@ -35,7 +45,7 @@ void test2() { //Alle bynavne bliver printet ud.
 void test3() { //To bynavne bliver printet ud.
   String[] resultat = search(liste, "Va");
 
-  if (resultat.length == liste.length) {
+  if (tekst == "Vancouver") {
     println("Succes!");
     println(resultat);
   } else {
