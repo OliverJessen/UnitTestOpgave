@@ -8,6 +8,7 @@ void runUnitTests() {
   //:-)
   test1();
   test2();
+  test3();
 }
 
 void test1() { //Ingen bynavne bliver printet ud, fordi det ikke er mere end 2 karakterer.
@@ -24,6 +25,16 @@ void test2() { //Alle bynavne bliver printet ud.
   boolean allCities = true;
   if (allCities) {
     println(liste);
+  } else {
+    println("Failure!");
+  }
+}
+
+void test3() { //To bynavne bliver printet ud.
+ String[] resultat = search(liste, "Va");
+  
+  if (resultat.length == liste.length) {
+    println(resultat);
   } else {
     println("Failure!");
   }
