@@ -39,3 +39,13 @@ void test3() { //To bynavne bliver printet ud.
     println("Failure!");
   }
 }
+
+void test4() { //Bynavnet bliver printet ud hvis det indeholder disse ord efter hinanden.
+ String[] resultat = search(liste, "ape");
+  
+  if (resultat.length == liste.length) {
+    println(resultat);
+  } else {
+    println("Failure!");
+  }
+}
