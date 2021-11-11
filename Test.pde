@@ -1,6 +1,6 @@
 String[] liste = {"Paris", "Budapest", "Skopje", "Rotterdam", "Valencia", "Vancouver", "Amsterdam", "Vienna", "Sydney", "New York City", "London", "Bangkok", "Hong Kong", "Dubai", "Rome", "Istanbul"};
 
-String testPrefix = "z";
+String testPrefix = "";
 
 void runUnitTests() {
   //her skriver du dine unit test's
@@ -20,8 +20,4 @@ void test1() {
 }
 
 void test2() {
-
-  
-
-
 }
