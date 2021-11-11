@@ -7,21 +7,23 @@ void runUnitTests() {
   //nedenfor er bare et eksempel på tre unit-tests
   //:-)
   test1();
+  test2();
 }
 
-void test1() {
+void test1() { //Ingen bynavne bliver printet ud, fordi det ikke er mere end 2 karakterer.
   String[] resultat = search(liste, "V");
 
-  if (resultat.length >= 0) {
+  if (resultat.length <= 2) {
     println("Succes!");
   } else {
     println("Failure!");
   }
 }
 
-void test2() {
-  if ("*") {
-    println(liste.length);
+void test2() { //Alle bynavne bliver printet ud.
+  boolean allCities = true;
+  if (allCities) {
+    println(liste);
   } else {
     println("Failure!");
   }
