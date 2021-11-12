@@ -1,9 +1,6 @@
 String[] liste = {"Paris", "Budapest", "Skopje", "Rotterdam", "Valencia", "Vancouver", "Amsterdam", "Vienna", "Sydney", "New York City", "London", "Bangkok", "Hong Kong", "Dubai", "Rome", "Istanbul"};
 
 void runUnitTests() {
-  //her skriver du dine unit test's
-  //nedenfor er bare et eksempel på tre unit-tests
-  //:-)
   test1();
   test2();
   test3();
@@ -14,8 +11,8 @@ String[] search(String[] liste_, String tekst) {
 
   if (tekst.equals("*"))
     return liste;
-    
-  if(tekst.contains("Va"))
+
+  if (tekst.contains("Va"))
     return liste;
 
   if (tekst.length() < 2)
@@ -59,8 +56,10 @@ void test2() { //Alle bynavne bliver printet ud.
 void test3() { //To bynavne bliver printet ud.
   String[] resultat = search(liste, "Va");
 
-  if(resultat == liste) {
+  if (liste == resultat) {
     println("Succes! Byerne Vancouver og Valencia blev fundet.");
+    for (String e : liste)
+      println(e);
   } else {
     println("Fejl! Byerne Vancouver og Valencia blev ikke fundet.");
   }

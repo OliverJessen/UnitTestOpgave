@@ -1,6 +1,3 @@
-//Disse meget simple metoder er dit framework til at unit-teste
-//Det er ikke færdigt ;-)
-
 void compareBooleans(boolean a, boolean b, String nameOfTest) {
   printTestResult(a==b, nameOfTest);
 }
