@@ -4,6 +4,7 @@ void runUnitTests() {
   test1();
   test2();
   test3();
+  test4();
 }
 
 
@@ -12,8 +13,8 @@ String[] search(String[] liste_, String tekst) {
   if (tekst.equals("*"))
     return liste;
 
- /* if (tekst.contains("Va"))
-    return liste; */
+  /* if (tekst.contains("Va"))
+   return liste; */
 
   if (tekst.length() < 2)
     return null;
@@ -56,12 +57,22 @@ void test2() { //Alle bynavne bliver printet ud.
 void test3() { //To bynavne bliver printet ud.
   String[] resultat = search(liste, "Va");
 
-  compareStrings("liste", "Vancouver", "hej");
-    
-  if (resultat.length == liste[1]) {
-    println("Succes! Byerne Vancouver og Valencia blev fundet.");
-    for (String e : liste)
-      println(e);
+  for(String e : resultat)
+  if (e.contains("Va")) {
+    println("Succes! Byen " + e + " blev fundet.");
+   
+  } else {
+    println("Fejl! Byerne Vancouver og Valencia blev ikke fundet.");
+  }
+}
+
+void test4() { //Et bynavn bliver printet ud hvis det indeholder disse ord.
+  String[] resultat = search(liste, "ape");
+
+  for(String e : resultat)
+  if (e.contains("ape")) {
+    println("Succes! Byen " + e + " blev fundet.");
+   
   } else {
     println("Fejl! Byerne Vancouver og Valencia blev ikke fundet.");
   }
