@@ -12,8 +12,8 @@ String[] search(String[] liste_, String tekst) {
   if (tekst.equals("*"))
     return liste;
 
-  if (tekst.contains("Va"))
-    return liste;
+ /* if (tekst.contains("Va"))
+    return liste; */
 
   if (tekst.length() < 2)
     return null;
@@ -56,7 +56,9 @@ void test2() { //Alle bynavne bliver printet ud.
 void test3() { //To bynavne bliver printet ud.
   String[] resultat = search(liste, "Va");
 
-  if (liste == resultat) {
+  compareStrings("liste", "Vancouver", "hej");
+    
+  if (resultat.length == liste[1]) {
     println("Succes! Byerne Vancouver og Valencia blev fundet.");
     for (String e : liste)
       println(e);
