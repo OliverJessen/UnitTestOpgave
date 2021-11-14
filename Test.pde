@@ -13,9 +13,6 @@ String[] search(String[] liste_, String tekst) {
   if (tekst.equals("*"))
     return liste;
 
-  /* if (tekst.contains("Va"))
-   return liste; */
-
   if (tekst.length() < 2)
     return null;
 
