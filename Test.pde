@@ -58,7 +58,7 @@ void test3() { //To bynavne bliver printet ud.
   String[] resultat = search(liste, "Va");
 
   for(String e : resultat)
-  if (e.contains("Valencia") || e.contains("Vancouver")) {
+  if (e.contains("Va")) {
     println("Succes! Byen " + e + " blev fundet.");
    
   } else {
