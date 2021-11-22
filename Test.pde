@@ -13,9 +13,6 @@ String[] search(String[] liste_, String tekst) {
   if (tekst.equals("*"))
     return liste;
 
-  /* if (tekst.contains("Va"))
-   return liste; */
-
   if (tekst.length() < 2)
     return null;
 
@@ -74,6 +71,6 @@ void test4() { //Et bynavn bliver printet ud hvis det indeholder disse ord.
     println("Succes! Byen " + e + " blev fundet.");
    
   } else {
-    println("Fejl! Byerne Vancouver og Valencia blev ikke fundet.");
+    println("Fejl! Byen Budapest blev ikke fundet.");
   }
 }
